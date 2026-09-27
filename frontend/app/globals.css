@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Inter:wght@400;500&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ede6d6;
+  color: #1c1b19;
+}
+
+.perspective {
+  perspective: 1500px;
+}
