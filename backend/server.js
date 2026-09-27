@@ -37,4 +37,12 @@ app.use((err, req, res, next) => {
 });
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+// Only start a persistent server when run directly (local dev / traditional hosts
+// like Railway or Render). On Vercel, this file is imported by api/index.js instead,
+// and Vercel manages the request lifecycle itself.
+if (require.main === module) {
+  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+}
+
+module.exports = app;
